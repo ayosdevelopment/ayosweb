@@ -2,7 +2,6 @@ import { useState } from "react"
 
 import Logo from "../assets/images/logotype.svg"
 import Proto from "../assets/images/header-proto.svg"
-import Logo from "../assets/images/logotype.svg"
 
 import { FiArrowDown, FiMoon, FiSun } from "react-icons/fi"
 
