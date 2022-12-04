@@ -2,7 +2,7 @@ import { Header } from "./views";
 
 function App() {
   return (
-    <div className="bg-white text-white">
+    <div className="bg-white text-white scroll-smooth">
       <Header />
     </div>
   );
