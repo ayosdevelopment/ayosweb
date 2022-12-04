@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "header-wave": "url('/src/assets/header-wave.svg')",
+        "header-wave": "url('/src/assets/hero-wave.svg')",
       },
     },
   },
