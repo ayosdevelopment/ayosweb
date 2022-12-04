@@ -1,6 +1,22 @@
-import Logo from "../assets/logotype.svg";
+import { useState } from "react"
+import Logo from "../assets/images/logotype.svg"
+import { FiMoon, FiSun } from "react-icons/fi"
 
 export const Header = () => {
+  const [theme, setTheme] = useState("light")
+
+  const handleTheme = () => {
+    if (localStorage.theme === "light") {
+      document.documentElement.classList.add("dark")
+      localStorage.theme = "dark"
+      setTheme(true)
+    } else {
+      document.documentElement.classList.remove("dark")
+      localStorage.theme = "light"
+      setTheme(false)
+    }
+  }
+
   return (
     <header className="home bg-header-wave bg-no-repeat bg-cover ">
       <div className="sm:container sm:mx-auto">
@@ -22,8 +38,13 @@ export const Header = () => {
               <a href="#contact">Contato</a>
             </li>
           </ul>
+          {!theme ? (
+            <FiMoon onClick={handleTheme} size={25} />
+          ) : (
+            <FiSun onClick={handleTheme} size={25} />
+          )}
         </nav>
       </div>
     </header>
-  );
-};
+  )
+}

@@ -1,2 +1,2 @@
-export { Header } from "./Header";
-export { Team } from "./_Team";
+export { Header } from "./Header"
+export { Team } from "./_Team"

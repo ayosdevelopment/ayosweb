@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -12,11 +13,9 @@ module.exports = {
         logo: ["Audio Wide", "sans-serif"],
       },
       backgroundImage: {
-        "header-wave": "url('/src/assets/header-wave.svg')",
+        "header-wave": "url('/src/assets/images/header-wave.svg')",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-};
+  plugins: [require("@tailwindcss/typography")],
+}
