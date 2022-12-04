@@ -2,7 +2,7 @@ import Logo from "../assets/logotype.svg";
 
 export const Header = () => {
   return (
-    <header className="home bg-header-wave bg-no-repeat bg-cover">
+    <header className="home bg-header-wave bg-no-repeat bg-cover ">
       <div className="sm:container sm:mx-auto">
         <nav className="sticky top-0 flex flex-row py-7 justify-between">
           <a href="">
