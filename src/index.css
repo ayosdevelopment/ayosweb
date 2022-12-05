@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .active {
+    @apply relative;
+    @apply after:absolute;
+    @apply after:bg-white;
+    @apply after:h-2;
+    @apply after:w-full;
+    @apply after:rounded-full;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: theme("colors.white");
+  }
+
+  .scrolled {
+    @apply bg-accent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

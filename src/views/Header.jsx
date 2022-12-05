@@ -1,56 +1,54 @@
-import { useState } from "react"
+import { useScroll, useTheme } from "../App"
 
 import Logo from "../assets/images/logotype.svg"
 
 import { FiMoon, FiSun } from "react-icons/fi"
-import { Hero } from "./Hero"
+
+import i18n from "../i18n"
 
 export const Header = () => {
-  const [theme, setTheme] = useState(false)
+  const [theme, setTheme] = useTheme()
+  const [scrolled, scrolledSection] = useScroll().scrolled
 
-  const handleTheme = () => {
-    if (localStorage.theme === "light") {
-      document.documentElement.classList.add("dark")
-      localStorage.theme = "dark"
-      setTheme(true)
-    } else {
-      document.documentElement.classList.remove("dark")
-      localStorage.theme = "light"
-      setTheme(false)
-    }
-  }
+  const handleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
+
+  const sections = ["home", "about", "portfolio", "contact"]
 
   return (
-    <header className="home bg-header-wave bg-no-repeat bg-cover pb-24">
-      <div className="sm:container sm:mx-auto px-6">
-        <nav className="sticky top-0 flex flex-row py-7 content-center justify-between text-white">
+    <header className="absolute">
+      <nav
+        className={`${
+          scrolled ? "scrolled" : ""
+        } fixed inset-x-0 top-0 text-white transition-all`}
+      >
+        <div className="sm:container sm:mx-auto px-6 flex flex-row py-7 items-center justify-between">
           <a href="">
             <img src={Logo} alt="Ayos Logo" />
           </a>
-          <ul className="flex flex-row list-none gap-6 font-medium">
-            <li className="">
-              <a href="#home">Início</a>
-            </li>
-            <li className="">
-              <a href="#about">Sobre</a>
-            </li>
-            <li className="">
-              <a href="#portfolio">Portfólio</a>
-            </li>
-            <li className="">
-              <a href="#contact">Contato</a>
-            </li>
+
+          <ul className="flex flex-row list-none gap-3 font-medium">
+            {sections.map((s) => (
+              <li
+                key={s}
+                className={`${
+                  scrolledSection === s ? "active" : ""
+                } hover:active`}
+              >
+                <a href={`#${s}`} className="block pb-3 px-2">
+                  {i18n.t(s)}
+                </a>
+              </li>
+            ))}
           </ul>
           <div className="cursor-pointer">
-            {!theme ? (
+            {theme === "dark" ? (
               <FiMoon onClick={handleTheme} size={25} />
             ) : (
               <FiSun onClick={handleTheme} size={25} />
             )}
           </div>
-        </nav>
-        <Hero />
-      </div>
+        </div>
+      </nav>
     </header>
   )
 }

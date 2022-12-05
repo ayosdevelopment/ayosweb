@@ -3,9 +3,9 @@ import Proto from "../assets/images/hero-proto.svg"
 
 export const Hero = () => {
   return (
-    <section className="pb-24">
-      <div className="sm:container sm:mx-auto px-6 pt-24">
-        <div className="columns-lg xl:columns-2 gap-48 justify-center mt-20">
+    <section id="home" className="bg-header-wave bg-no-repeat bg-cover pb-32">
+      <div className="sm:container sm:mx-auto px-6 pt-44">
+        <div className="columns-lg xl:columns-2 gap-48 justify-center">
           <div className="py-8 text-white">
             <h1 className="font-bold text-5xl">
               Seu projeto fora do papel em{" "}
@@ -15,13 +15,13 @@ export const Hero = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button class="outline outline-3 outline-white rounded-full py-4 px-9 bg-transparent font-bold text-md">
+            <button className="outline outline-3 outline-white rounded-full py-4 px-9 bg-transparent font-bold text-md">
               Começar
             </button>
           </div>
           <img src={Proto} alt="Screen Prototype" />
         </div>
-        <button class="flex rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center">
+        <button className="flex rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center animate-bounce">
           <FiArrowDown size={20} className="text-primary" />
         </button>
       </div>
