@@ -1,5 +1,6 @@
 import { useEffect } from "react"
-import { Header, Team } from "./views"
+import { Header, Team } from "./views/_index"
+import { About } from "./views/About"
 
 function App() {
   useEffect(() => {
@@ -11,9 +12,10 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-white text-white scroll-smooth">
+    <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white scroll-smooth">
       <Header />
       <Team />
+      <About />
     </div>
   )
 }
