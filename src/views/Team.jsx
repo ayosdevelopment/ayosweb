@@ -1,6 +1,8 @@
-export const Team = () => {
+import { forwardRef } from "react"
+
+export const Team = forwardRef((props, ref) => {
   return (
-    <section className="bg-gray-100 py-20" id="team">
+    <section ref={ref} id="team" className="bg-gray-100 py-20 h-screen">
       <div className="sm:container sm:mx-auto">
         <div className="flex flex-col items-center">
           <h2 className="text-5xl max-w-3xl leading-tight font-bold text-bg100 dark:text-white text-center">
@@ -11,4 +13,4 @@ export const Team = () => {
       </div>
     </section>
   )
-}
+})

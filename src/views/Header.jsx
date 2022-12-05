@@ -19,7 +19,7 @@ export const Header = () => {
       <nav
         className={`${
           scrolled ? "scrolled" : ""
-        } fixed inset-x-0 top-0 text-white transition-all`}
+        } fixed inset-x-0 top-0 text-white transition-all z-50`}
       >
         <div className="sm:container sm:mx-auto px-6 flex flex-row py-7 items-center justify-between">
           <a href="">

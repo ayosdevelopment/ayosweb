@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useRef, useState } from "react"
 import { About, Header, Hero, Team } from "./views"
 
 const Theme = createContext()
@@ -7,10 +7,32 @@ const Scroll = createContext()
 function App() {
   const [theme, setTheme] = useState(localStorage.theme)
   const [scrolled, setScrolled] = useState(window?.scrollY > 48)
-  const [scrolledSection, setScrolledSection] = useState("about")
+  const [scrolledSection, setScrolledSection] = useState("home")
+
+  const hero = useRef()
+  const team = useRef()
+  const about = useRef()
+
+  console.log(scrolledSection)
 
   const handleScroll = (e) => {
-    setScrolled(window?.scrollY > 48)
+    const scroll = window?.scrollY
+
+    setScrolled(scroll > 48)
+
+    setScrolledSection(
+      scroll >= about.current.offsetTop * 0.95
+        ? "about"
+        : scroll >= team.current.offsetTop * 0.95
+        ? "team"
+        : scroll >= hero.current.offsetTop * 0.95
+        ? "home"
+        : "contact"
+    )
+    // console.log(window?.scrollY)
+    // console.log(hero.current)
+    // console.log(team.current.offsetTop)
+    // console.log(about.current)
   }
 
   useEffect(() => {
@@ -36,9 +58,9 @@ function App() {
       >
         <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white">
           <Header />
-          <Hero />
-          <Team />
-          <About />
+          <Hero ref={hero} />
+          <Team ref={team} />
+          <About ref={about} />
         </div>
       </Scroll.Provider>
     </Theme.Provider>

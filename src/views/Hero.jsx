@@ -1,9 +1,15 @@
+import { forwardRef } from "react"
+
 import { FiArrowDown } from "react-icons/fi"
 import Proto from "../assets/images/hero-proto.svg"
 
-export const Hero = () => {
+export const Hero = forwardRef((props, ref) => {
   return (
-    <section id="home" className="bg-header-wave bg-no-repeat bg-cover pb-32">
+    <section
+      ref={ref}
+      id="home"
+      className="bg-header-wave bg-no-repeat bg-cover pb-32 h-screen"
+    >
       <div className="sm:container sm:mx-auto px-6 pt-44">
         <div className="columns-lg xl:columns-2 gap-48 justify-center">
           <div className="py-8 text-white">
@@ -27,4 +33,4 @@ export const Hero = () => {
       </div>
     </section>
   )
-}
+})
