@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react"
-import { About, Header, Hero, Team } from "./views"
+import { About, Contact, Header, Hero, Portfolio, Team } from "./views"
 
 const Theme = createContext()
 const Scroll = createContext()
@@ -12,6 +12,8 @@ function App() {
   const hero = useRef()
   const team = useRef()
   const about = useRef()
+  const portfolio = useRef()
+  const contact = useRef()
 
   console.log(scrolledSection)
 
@@ -61,6 +63,8 @@ function App() {
           <Hero ref={hero} />
           <Team ref={team} />
           <About ref={about} />
+          <Portfolio ref={portfolio} />
+          <Contact ref={contact} />
         </div>
       </Scroll.Provider>
     </Theme.Provider>

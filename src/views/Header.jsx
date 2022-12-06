@@ -21,12 +21,12 @@ export const Header = () => {
           scrolled ? "scrolled" : ""
         } fixed inset-x-0 top-0 text-white transition-all z-50`}
       >
-        <div className="sm:container sm:mx-auto px-6 flex flex-row py-7 items-center justify-between">
-          <a href="">
-            <img src={Logo} alt="Ayos Logo" />
+        <div className="container flex flex-row items-center justify-between py-7 mx-auto">
+          <a href="/">
+            <img src={Logo} alt="Ayos Logo" className="w-24" />
           </a>
 
-          <ul className="flex flex-row list-none gap-3 font-medium">
+          <ul className="flex flex-row justify-center list-none gap-3 font-medium sm:-ml-10">
             {sections.map((s) => (
               <li
                 key={s}
@@ -42,9 +42,9 @@ export const Header = () => {
           </ul>
           <div className="cursor-pointer">
             {theme === "dark" ? (
-              <FiMoon onClick={handleTheme} size={25} />
+              <FiMoon onClick={handleTheme} size={30} />
             ) : (
-              <FiSun onClick={handleTheme} size={25} />
+              <FiSun onClick={handleTheme} size={30} />
             )}
           </div>
         </div>

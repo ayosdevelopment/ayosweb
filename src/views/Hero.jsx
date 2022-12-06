@@ -8,12 +8,12 @@ export const Hero = forwardRef((props, ref) => {
     <section
       ref={ref}
       id="home"
-      className="bg-header-wave bg-no-repeat bg-cover pb-32 h-screen"
+      className="bg-header-wave bg-no-repeat bg-cover h-screen"
     >
-      <div className="sm:container sm:mx-auto px-6 pt-44">
-        <div className="columns-lg xl:columns-2 gap-48 justify-center">
+      <div className="sm:container sm:mx-auto px-6 scroll-smooth flex flex-col h-full pt-28 lg:pt-36 md:pt-28">
+        <div className="columns-lg xl:columns-2 gap-48 justify-center items-center">
           <div className="py-8 text-white">
-            <h1 className="font-bold text-5xl">
+            <h1 className="font-bold sm:text-5xl text-3xl">
               Seu projeto fora do papel em{" "}
               <span className="underline underline-offset-4">semanas</span>
             </h1>
@@ -25,9 +25,11 @@ export const Hero = forwardRef((props, ref) => {
               Começar
             </button>
           </div>
-          <img src={Proto} alt="Screen Prototype" />
+          <div className="w-full flex justify-center">
+            <img src={Proto} alt="Screen Prototype" />
+          </div>
         </div>
-        <button className="flex rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center animate-bounce">
+        <button className="xl:flex rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center hidden">
           <FiArrowDown size={20} className="text-primary" />
         </button>
       </div>

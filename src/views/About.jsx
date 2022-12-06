@@ -1,9 +1,10 @@
 import { forwardRef } from "react"
+import { Title } from "../components"
 
 export const About = forwardRef((props, ref) => {
   return (
     <main ref={ref} id="about" className="h-screen">
-      <h1>Por que escolher a Ayos?</h1>
+      <Title text="Por que escolher a Ayos?" />
     </main>
   )
 })
