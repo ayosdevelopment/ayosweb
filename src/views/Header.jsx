@@ -12,7 +12,7 @@ export const Header = () => {
 
   const handleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
 
-  const sections = ["home", "about", "portfolio", "contact"]
+  const sections = ["home", "team", "about", "portfolio", "contact"]
 
   return (
     <header className="absolute">

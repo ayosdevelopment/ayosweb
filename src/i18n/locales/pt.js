@@ -3,4 +3,5 @@ export default {
   about: "Sobre",
   portfolio: "Portfólio",
   contact: "Contato",
+  team: "Equipe",
 }
