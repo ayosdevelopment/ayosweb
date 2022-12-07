@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react"
-import { About, Contact, Header, Hero, Portfolio, Team } from "./views"
+import { FiChevronUp } from "react-icons/fi"
+import { About, Contact, Footer, Header, Hero, Portfolio, Team } from "./views"
 
 const Theme = createContext()
 const Scroll = createContext()
@@ -52,13 +53,25 @@ function App() {
       <Scroll.Provider
         value={{ scrolled: [scrolled, scrolledSection], setScrolledSection }}
       >
-        <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white">
+        <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white relative">
           <Header />
           <Hero ref={hero} />
           <Team ref={team} />
           <About ref={about} />
           <Portfolio ref={portfolio} />
           <Contact ref={contact} />
+          <Footer />
+          <button
+            className={`${
+              scrolled ? "flex" : "hidden"
+            } fixed bottom-24 right-8 rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center border border-solid border-primary`}
+          >
+            <FiChevronUp
+              size={20}
+              className="text-primary"
+              onClick={() => window.scrollTo(0, 0)}
+            />
+          </button>
         </div>
       </Scroll.Provider>
     </Theme.Provider>
@@ -66,6 +79,8 @@ function App() {
 }
 
 export default App
+
+export const sections = ["home", "team", "about", "portfolio", "contact"]
 
 export const useTheme = () => useContext(Theme)
 export const useScroll = () => useContext(Scroll)

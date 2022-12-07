@@ -1,4 +1,4 @@
-import { useScroll, useTheme } from "../App"
+import { sections, useScroll, useTheme } from "../App"
 
 import Logo from "../assets/images/logotype.svg"
 
@@ -11,8 +11,6 @@ export const Header = () => {
   const [scrolled, scrolledSection] = useScroll().scrolled
 
   const handleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
-
-  const sections = ["home", "team", "about", "portfolio", "contact"]
 
   return (
     <header className="absolute">
