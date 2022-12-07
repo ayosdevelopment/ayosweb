@@ -21,7 +21,10 @@ export const Hero = forwardRef((props, ref) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="outline outline-3 outline-white rounded-full py-4 px-9 bg-transparent font-bold text-md">
+            <button
+              className="outline outline-3 outline-white rounded-full py-4 px-9 bg-transparent font-bold text-md"
+              onClick={() => window.scrollTo(0, 500)}
+            >
               Começar
             </button>
           </div>
@@ -29,7 +32,10 @@ export const Hero = forwardRef((props, ref) => {
             <img src={Proto} alt="Screen Prototype" />
           </div>
         </div>
-        <button className="xl:flex rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center hidden">
+        <button
+          className="xl:flex rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center hidden"
+          onClick={() => window.scrollTo(0, 500)}
+        >
           <FiArrowDown size={20} className="text-primary" />
         </button>
       </div>
