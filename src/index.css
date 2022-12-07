@@ -14,6 +14,8 @@
 
   .scrolled {
     @apply bg-accent;
+    @apply drop-shadow-2xl;
+    @apply shadow-lg;
   }
 
   :target:not(#home):before {

@@ -8,9 +8,9 @@ export const Hero = forwardRef((props, ref) => {
     <section
       ref={ref}
       id="home"
-      className="bg-header-wave bg-no-repeat bg-cover h-screen"
+      className="dark:bg-header-wave-dark bg-header-wave bg-no-repeat bg-contain bg-center"
     >
-      <div className="sm:container sm:mx-auto px-6 scroll-smooth flex flex-col h-full pt-28 lg:pt-36 md:pt-28">
+      <div className="sm:container sm:mx-auto px-6 scroll-smooth flex flex-col h-full pt-28 pb-24 mb-14 lg:pt-36 md:pt-28">
         <div className="columns-lg xl:columns-2 gap-48 justify-center items-center">
           <div className="py-8 text-white">
             <h1 className="font-bold sm:text-5xl text-3xl">

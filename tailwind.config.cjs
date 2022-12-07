@@ -19,6 +19,7 @@ module.exports = {
       },
       backgroundImage: {
         "header-wave": "url('/src/assets/images/header-wave.svg')",
+        "header-wave-dark": "url('/src/assets/images/header-wave-dark.svg')",
         "contact-wave": "url('/src/assets/images/contact-wave.svg')",
       },
     },

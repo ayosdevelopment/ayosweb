@@ -53,7 +53,7 @@ function App() {
       <Scroll.Provider
         value={{ scrolled: [scrolled, scrolledSection], setScrolledSection }}
       >
-        <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white relative">
+        <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white relative select-none">
           <Header />
           <Hero ref={hero} />
           <Team ref={team} />
