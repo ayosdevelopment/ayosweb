@@ -11,7 +11,7 @@ export const About = forwardRef((props, ref) => {
         <Title text="Por que escolher a Ayos?" />
         <div className="px-32">
           <div className="flex gap-32 columns-2 mt-28">
-            <h3 className="basis-1/2 font-bold text-3xl  dark:text-white text-bg100">
+            <h3 className="basis-1/2 font-bold text-3xl dark:text-white text-bg100">
               Método planejado para acelerar seu negócio
             </h3>
             <h4
