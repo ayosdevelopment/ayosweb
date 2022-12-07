@@ -19,7 +19,7 @@ export const Header = () => {
           scrolled ? "scrolled" : ""
         } fixed inset-x-0 top-0 text-white transition-all z-50`}
       >
-        <div className="container flex flex-row items-center justify-between py-7 mx-auto">
+        <div className="container flex flex-row items-center justify-between py-7 mx-auto px-6 md:px-0">
           <a href="/">
             <img src={Logo} alt="Ayos Logo" className="w-24" />
           </a>
@@ -32,7 +32,7 @@ export const Header = () => {
                   scrolledSection === s ? "active" : ""
                 } hover:active`}
               >
-                <a href={`#${s}`} className="block pb-3 px-2">
+                <a href={`#${s}`} className="md:block pb-3 px-2 hidden">
                   {i18n.t(s)}
                 </a>
               </li>

@@ -53,7 +53,7 @@ function App() {
       <Scroll.Provider
         value={{ scrolled: [scrolled, scrolledSection], setScrolledSection }}
       >
-        <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white relative select-none">
+        <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white relative select-none overflow-x-hidden">
           <Header />
           <Hero ref={hero} />
           <Team ref={team} />
@@ -64,13 +64,10 @@ function App() {
           <button
             className={`${
               scrolled ? "flex" : "hidden"
-            } fixed bottom-24 right-8 rounded-full flex-wrap w-12 h-12 bg-white justify-center content-center border border-solid border-primary`}
+            } fixed bottom-24 md:right-8 right-52 rounded-full flex-wrap w-12 h-12 bg-primary justify-center items-center border border-solid border-primary`}
+            onClick={() => window.scrollTo(0, 0)}
           >
-            <FiChevronUp
-              size={20}
-              className="text-primary"
-              onClick={() => window.scrollTo(0, 0)}
-            />
+            <FiChevronUp size={20} className="text-white" />
           </button>
         </div>
       </Scroll.Provider>
