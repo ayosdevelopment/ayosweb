@@ -1,13 +1,18 @@
 import { forwardRef } from "react"
+import { FiArrowRight } from "react-icons/fi"
 
 export const Contact = forwardRef((props, ref) => {
   return (
-    <section ref={ref} id="contact" className="bg-gray-100 h-screen">
+    <section ref={ref} id="contact" className="bg-gray-100 my-20">
       <div className="sm:container sm:mx-auto">
-        <div className="flex flex-col items-center">
-          <h1 className="lg:text-4xl sm:text-3xl text-2xl w-full leading-tight font-bold text-bg100 dark:text-white text-center">
+        <div className="flex py-32 px-40 rounded-3xl justify-between content-center bg-contact-wave bg-secondary bg-center bg-no-repeat bg-cover">
+          <h5 className="text-3xl align-middle leading-tight font-bold text-white">
             Quer falar com a gente?
-          </h1>
+          </h5>
+          <button className="text-secondary rounded-3xl py-4 px-12 font-bold text-lg flex items-center bg-white">
+            Entre em contato
+            <FiArrowRight size={24} className="ml-3" />
+          </button>
         </div>
       </div>
     </section>

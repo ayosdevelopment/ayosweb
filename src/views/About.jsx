@@ -23,17 +23,17 @@ export const About = forwardRef((props, ref) => {
           </div>
           <div className="columns-3 mt-20 gap-8 flex">
             <Card
-              icon={<img src={profile} className="h-20 w-20" />}
+              icon={<img src={profile} width={80} height={80} />}
               title="Perfil"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
             />
             <Card
-              icon={<img src={laptop} className="h-20 w-20" />}
+              icon={<img src={laptop} width={80} height={80} />}
               title="Código"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
             />
             <Card
-              icon={<img src={target} className="h-20 w-20" />}
+              icon={<img src={target} width={80} height={80} />}
               title="Prazo & Meta"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
             />

@@ -19,8 +19,8 @@ export const Portfolio = forwardRef((props, ref) => {
           <div className="border p-2 rounded-lg">Projeto 03</div>
           <div className="border p-2 rounded-lg">Projeto 04</div>
         </div>
-        <div className="flex justify-center mt-10">
-          <button className="bg-secondary rounded-full py-4 px-12 font-bold text-sm flex items-center text-white">
+        <div className="flex justify-center mt-20">
+          <button className="bg-secondary rounded-full py-4 px-12 font-bold text-base flex items-center text-white">
             Ver mais projetos
             <FiArrowRight size={24} className="ml-3" />
           </button>
