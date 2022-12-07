@@ -3,7 +3,7 @@ import { FiArrowRight } from "react-icons/fi"
 
 export const Portfolio = forwardRef((props, ref) => {
   return (
-    <section ref={ref} id="portfolio" className="bg-gray-100 h-screen">
+    <section ref={ref} id="portfolio" className="bg-gray-100 py-20">
       <div className="sm:container sm:mx-auto">
         <div className="flex flex-col items-center">
           <h1 className="lg:text-4xl sm:text-3xl text-2xl w-full leading-tight font-bold text-bg100 dark:text-white text-center">
@@ -20,7 +20,7 @@ export const Portfolio = forwardRef((props, ref) => {
           <div className="border p-2 rounded-lg">Projeto 04</div>
         </div>
         <div className="flex justify-center mt-10">
-          <button className="bg-secondary rounded-full py-4 px-12 font-bold text-sm flex items-center">
+          <button className="bg-secondary rounded-full py-4 px-12 font-bold text-sm flex items-center text-white">
             Ver mais projetos
             <FiArrowRight size={24} className="ml-3" />
           </button>

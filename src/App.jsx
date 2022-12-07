@@ -15,26 +15,20 @@ function App() {
   const portfolio = useRef()
   const contact = useRef()
 
-  console.log(scrolledSection)
+  const sections = Array.from([contact, portfolio, about, team, hero])
 
   const handleScroll = (e) => {
     const scroll = window?.scrollY
 
     setScrolled(scroll > 48)
 
-    setScrolledSection(
-      scroll >= about.current.offsetTop * 0.95
-        ? "about"
-        : scroll >= team.current.offsetTop * 0.95
-        ? "team"
-        : scroll >= hero.current.offsetTop * 0.95
-        ? "home"
-        : "contact"
-    )
-    // console.log(window?.scrollY)
-    // console.log(hero.current)
-    // console.log(team.current.offsetTop)
-    // console.log(about.current)
+    sections.some(({ current }) => {
+      if (scroll >= current.offsetTop * 0.85) {
+        setScrolledSection(current.id)
+        return true
+      }
+      return false
+    })
   }
 
   useEffect(() => {

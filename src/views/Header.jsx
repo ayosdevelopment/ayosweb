@@ -26,7 +26,7 @@ export const Header = () => {
             <img src={Logo} alt="Ayos Logo" className="w-24" />
           </a>
 
-          <ul className="flex flex-row justify-center list-none gap-3 font-medium sm:-ml-10">
+          <ul className="flex flex-row justify-center list-none gap-3 font-medium">
             {sections.map((s) => (
               <li
                 key={s}
@@ -40,11 +40,19 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <div className="cursor-pointer">
+          <div className="flex justify-end w-24">
             {theme === "dark" ? (
-              <FiMoon onClick={handleTheme} size={30} />
+              <FiMoon
+                onClick={handleTheme}
+                className="cursor-pointer"
+                size={30}
+              />
             ) : (
-              <FiSun onClick={handleTheme} size={30} />
+              <FiSun
+                onClick={handleTheme}
+                className="cursor-pointer"
+                size={30}
+              />
             )}
           </div>
         </div>
