@@ -23,6 +23,8 @@ module.exports = {
         "contact-wave": "url('/src/assets/images/contact-wave.svg')",
         "footer-wave": "url('/src/assets/images/footer-wave.svg')",
         "footer-wave-dark": "url('/src/assets/images/footer-wave-dark.svg')",
+        "team-shape": "url('/src/assets/images/team-shape.svg')",
+        "team-shape-dark": "url('/src/assets/images/team-shape-dark.svg')",
       },
     },
   },
