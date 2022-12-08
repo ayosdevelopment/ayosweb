@@ -20,7 +20,7 @@ export const Team = forwardRef((props, ref) => {
   ]
 
   return (
-    <section ref={ref} id="team" className="bg-gray-100 py-20 h-screen">
+    <section ref={ref} id="team" className="bg-gray-100 py-20">
       <div className="sm:container sm:mx-auto">
         <Title text="Somos uma equipe completa à disposição de seu <span class='text-primary'>objetivo</span>" />
         <div className="w-full flex justify-center">
