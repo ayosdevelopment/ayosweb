@@ -1,10 +1,18 @@
 import { forwardRef } from "react"
+import { useTheme } from "../App"
+
 import laptop from "../assets/icons/laptop.svg"
+import laptopDark from "../assets/icons/laptop_dark.svg"
 import profile from "../assets/icons/profile.svg"
+import profileDark from "../assets/icons/profile_dark.svg"
 import target from "../assets/icons/target.svg"
+import targetDark from "../assets/icons/target_dark.svg"
+
 import { Card, Title } from "../components"
 
 export const About = forwardRef((props, ref) => {
+  const [theme] = useTheme()
+
   return (
     <main ref={ref} id="about" className="py-20">
       <div className="container mx-auto">
@@ -23,17 +31,36 @@ export const About = forwardRef((props, ref) => {
           </div>
           <div className="columns-3 mt-20 gap-6 flex flex-col xl:flex-row">
             <Card
-              icon={<img src={profile} width={80} height={80} className="" />}
+              icon={
+                <img
+                  src={theme === "dark" ? profileDark : profile}
+                  width={80}
+                  height={80}
+                  className=""
+                />
+              }
               title="Perfil"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
             />
             <Card
-              icon={<img src={laptop} width={80} height={80} />}
+              icon={
+                <img
+                  src={theme === "dark" ? laptopDark : laptop}
+                  width={80}
+                  height={80}
+                />
+              }
               title="Código"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
             />
             <Card
-              icon={<img src={target} width={80} height={80} />}
+              icon={
+                <img
+                  src={theme === "dark" ? targetDark : target}
+                  width={80}
+                  height={80}
+                />
+              }
               title="Prazo & Meta"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
             />
