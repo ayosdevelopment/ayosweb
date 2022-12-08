@@ -18,9 +18,11 @@ export const Footer = () => {
     <footer className="dark:bg-footer-wave-dark bg-footer-wave bg-no-repeat bg-cover bg-center h-[500px] flex items-end text-white">
       <div className="container py-7 mx-auto divide-y divide-solid divide-white md:px-0 px-12">
         <div className="flex flex-row items-center justify-between mb-4">
-          <a href="/">
-            <img src={Logo} alt="Ayos Logo" className="w-24" />
-          </a>
+          <div className="w-36">
+            <a href="/">
+              <img src={Logo} alt="Ayos Logo" className="w-24" />
+            </a>
+          </div>
 
           <ul className="flex flex-row justify-center list-none gap-3 font-medium">
             {sections.map((s) => (

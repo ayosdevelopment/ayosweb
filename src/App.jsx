@@ -77,7 +77,7 @@ function App() {
 
 export default App
 
-export const sections = ["home", "team", "about", "portfolio", "contact"]
+export const sections = ["home", "about", "portfolio", "team", "contact"]
 
 export const useTheme = () => useContext(Theme)
 export const useScroll = () => useContext(Scroll)
