@@ -11,12 +11,12 @@ function App() {
   const [scrolledSection, setScrolledSection] = useState("home")
 
   const hero = useRef()
-  const team = useRef()
   const about = useRef()
   const portfolio = useRef()
+  const team = useRef()
   const contact = useRef()
 
-  const sections = Array.from([contact, portfolio, about, team, hero])
+  const sections = Array.from([contact, team, portfolio, about, hero])
 
   const handleScroll = (e) => {
     const scroll = window?.scrollY
@@ -56,9 +56,9 @@ function App() {
         <div className="bg-white dark:bg-gradient-to-r from-bg100 to-bg200 dark:text-white relative select-none overflow-x-hidden">
           <Header />
           <Hero ref={hero} />
-          <Team ref={team} />
           <About ref={about} />
           <Portfolio ref={portfolio} />
+          <Team ref={team} />
           <Contact ref={contact} />
           <Footer />
           <button
