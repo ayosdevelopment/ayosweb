@@ -21,6 +21,7 @@ module.exports = {
         "header-wave": "url('/src/assets/images/header-wave.svg')",
         "header-wave-dark": "url('/src/assets/images/header-wave-dark.svg')",
         "contact-wave": "url('/src/assets/images/contact-wave.svg')",
+        "contact-wave-dark": "url('/src/assets/images/contact-wave-dark.svg')",
         "footer-wave": "url('/src/assets/images/footer-wave.svg')",
         "footer-wave-dark": "url('/src/assets/images/footer-wave-dark.svg')",
         "team-shape": "url('/src/assets/images/team-shape.svg')",

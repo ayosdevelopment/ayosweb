@@ -17,7 +17,7 @@ export const Header = () => {
       <nav
         className={`${
           scrolled ? "scrolled" : ""
-        } fixed inset-x-0 top-0 text-white transition-all z-50`}
+        } fixed inset-x-0 top-0 text-white transition-all z-50 bg-transparent`}
       >
         <div className="container flex flex-row items-center justify-between py-7 mx-auto px-6 md:px-0">
           <a href="/">
@@ -32,7 +32,10 @@ export const Header = () => {
                   scrolledSection === s ? "active" : ""
                 } hover:active`}
               >
-                <a href={`#${s}`} className="md:block pb-3 px-2 hidden">
+                <a
+                  href={`#${s}`}
+                  className="md:block sm:pb-3 sm:px-2 px-0 pb-0 text-sm border"
+                >
                   {i18n.t(s)}
                 </a>
               </li>

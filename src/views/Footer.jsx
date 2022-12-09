@@ -8,9 +8,9 @@ import i18n from "../i18n"
 
 export const Footer = () => {
   const social = [
-    { icon: FaYoutube, uri: "http://ayos.dev" },
+    { icon: FaYoutube, uri: "https://www.youtube.com/@ayosdev" },
     { icon: AiFillInstagram, uri: "https://www.instagram.com/ayosdev/" },
-    { icon: FaFacebook, uri: "http://ayos.dev" },
+    { icon: FaFacebook, uri: "https://www.facebook.com/ayosdev" },
     { icon: FaGithub, uri: "https://github.com/ayosdevelopment" },
   ]
 

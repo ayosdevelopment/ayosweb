@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi"
 export const Portfolio = forwardRef((props, ref) => {
   return (
     <section ref={ref} id="portfolio" className="bg-gray-100 py-20">
-      <div className="container sm:mx-auto md:px-0 px-6">
+      <div className="container sm:mx-auto xl:px-0 px-10">
         <div className="flex flex-col items-center">
           <h1 className="lg:text-4xl sm:text-3xl text-2xl w-full leading-tight font-bold text-bg100 dark:text-white text-center">
             Explore nossos últimos
