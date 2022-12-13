@@ -8,15 +8,36 @@ import Bruno from "../assets/team/bruno.jpg"
 import Julio from "../assets/team/julio.jpg"
 import Leo from "../assets/team/leo.jpg"
 import Pedro from "../assets/team/pedro.jpg"
+import desc from "../assets/team/descriptions.json"
 
 export const Team = forwardRef((props, ref) => {
   const [index, setIndex] = useState(0)
 
   const team = [
-    { name: "Bruno", position: "CEO", photo: Bruno },
-    { name: "Julio", position: "CMO", photo: Julio },
-    { name: "Leo", position: "CIO", photo: Leo },
-    { name: "Pedro", position: "CTO", photo: Pedro },
+    {
+      name: "Bruno",
+      position: "CEO",
+      photo: Bruno,
+      description: desc.about[0],
+    },
+    {
+      name: "Julio",
+      position: "CMO",
+      photo: Julio,
+      description: desc.about[1],
+    },
+    {
+      name: "Leo",
+      position: "CIO",
+      photo: Leo,
+      description: desc.about[2],
+    },
+    {
+      name: "Pedro",
+      position: "CTO",
+      photo: Pedro,
+      description: desc.about[3],
+    },
   ]
 
   return (
@@ -37,15 +58,12 @@ export const Team = forwardRef((props, ref) => {
                 <h3 className="font-extrabold text-4xl text-primary mb-12">
                   Nossa equipe
                 </h3>
-                <p className="text-sm dark:text-white text-bg100 font-semibold mb-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                  quis gravida sem, euismod vehicula magna. Suspendisse nisl
-                  libero, dapibus ac turpis non, porta bibendum augue. Nam
-                  sollicitudin ligula tortor, eu mattis ante rhoncus eget. Etiam
-                  vehicula sem mi, in sodales erat accumsan nec. Etiam ultricies
-                  felis sapien, et faucibus nisi elementum at
+                <p className="text-sm dark:text-white text-bg100 font-semibold mb-6 w-full overflow-auto max-h-56 text-justify pr-6">
+                  {team[index].description
+                    ? team[index].description
+                    : `Sem descrição ${index}`}
                 </p>
-                <div className="flex flex-row justify-between items-center">
+                <div className="flex flex-row justify-between items-center w-full">
                   <div className="flex flex-col">
                     <h4 className="font-bold text-lg text-primary mb-1">
                       {team[index].name}

@@ -64,7 +64,7 @@ function App() {
           <button
             className={`${
               scrolled ? "flex" : "hidden"
-            } fixed bottom-24 md:right-8 right-52 rounded-full flex-wrap w-12 h-12 bg-primary justify-center items-center border border-solid border-primary`}
+            } container mx-auto fixed bottom-4 right-0 left-0 sm:left-0 sm:-right-3/4 rounded-full flex-wrap w-12 h-12 bg-primary justify-center items-center border border-solid border-primary`}
             onClick={() => window.scrollTo(0, 0)}
           >
             <FiChevronUp size={20} className="text-white" />

@@ -40,7 +40,13 @@ export const About = forwardRef((props, ref) => {
                 />
               }
               title="Perfil"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
+              text="Com uma
+                    combinação única de habilidades técnicas e criatividade, esta equipe é capaz de
+                    criar soluções inovadoras e de alta qualidade para os desafios enfrentados pelos
+                    clientes. Além disso, a equipe também se destaca pelo seu
+                    comprometimento e dedicação em entregar projetos dentro do prazo e com o
+                    máximo de qualidade possível. Com um time altamente motivado e talentoso, a
+                    startup tem se destacado no mercado de desenvolvimento web."
             />
             <Card
               icon={
@@ -51,7 +57,13 @@ export const About = forwardRef((props, ref) => {
                 />
               }
               title="Código"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
+              text="Nossa equipe de
+                    desenvolvimento utiliza as últimas tecnologias e técnicas para criar soluções
+                    robustas e escaláveis que atendem às necessidades dos nossos clientes. Além
+                    disso, nosso código é escrito de forma clara e organizada, o que facilita a
+                    manutenção e atualização futuras. Com uma arquitetura sólida e eficiente, nossos
+                    produtos são capazes de oferecer uma excelente experiência aos usuários e
+                    suportar o crescimento da empresa."
             />
             <Card
               icon={
@@ -62,7 +74,14 @@ export const About = forwardRef((props, ref) => {
                 />
               }
               title="Prazo & Meta"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis gravida sem, euismod vehicula magna."
+              text="A nossa empresa se destaca pela eficiência na entrega dos nossos produtos e
+                    serviços. Nós nos comprometemos em entregar cada projeto dentro do prazo
+                    estabelecido, sem comprometer a qualidade do trabalho realizado. Além disso,
+                    nossa equipe é altamente eficiente e capaz de se adaptar rapidamente às
+                    mudanças de última hora, garantindo que os produtos entregues estejam sempre
+                    de acordo com as expectativas dos nossos clientes. Com uma forte ética de
+                    trabalho e uma equipe altamente motivada, nós garantimos a entrega de
+                    produtos e serviços de alta qualidade dentro do prazo estipulado."
             />
           </div>
         </div>

@@ -6,6 +6,7 @@
   .active {
     @apply relative;
     @apply after:absolute;
+    @apply after:bottom-0;
     @apply after:bg-white;
     @apply after:h-0.5;
     @apply after:w-full;
@@ -13,7 +14,7 @@
   }
 
   .scrolled {
-    @apply bg-accent;
+    @apply bg-[#7258FF];
     @apply drop-shadow-2xl;
     @apply shadow-lg;
   }
@@ -28,4 +29,14 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #7258FF;
+  border-radius: 10px;
 }

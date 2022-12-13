@@ -18,8 +18,9 @@ export const Hero = forwardRef((props, ref) => {
               <span className="underline underline-offset-4">semanas</span>
             </h1>
             <p className="text-lg mt-10 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Automatize seu trabalho manual, deixe de fazer a mão tudo que você
+              pode deixar um sistema fazer por você tornando seu negócio mais
+              eficaz, harmônico e passível de erros humanos.
             </p>
             <a
               className="outline outline-3 outline-white rounded-full py-4 px-9 bg-transparent font-bold text-md"
