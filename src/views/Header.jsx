@@ -19,8 +19,10 @@ export const Header = () => {
     <header className="absolute">
       <nav
         className={`${
-          scrolled ? "scrolled" : ""
-        } fixed inset-x-0 top-0 text-white transition-all z-50 bg-transparent`}
+          scrolled ? "scrolled" : "lg:bg-transparent"
+        } fixed inset-x-0 top-0 text-white transition-all z-50 ${
+          isOpen ? "bg-[#7258FF]" : ""
+        }`}
       >
         <div className="container flex flex-row items-center justify-between py-7 mx-auto px-6 md:px-0">
           {/* Logo */}
@@ -82,7 +84,7 @@ export const Header = () => {
         <ul
           className={`${
             isOpen ? "bg-" : "hidden"
-          } flex-col justify-center list-none gap-3 font-medium transition-all flex px-6 py-6 lg:hidden`}
+          } container mx-auto flex-col justify-center list-none gap-3 font-medium transition-all flex py-6 pl-6 md:pl-0 lg:hidden`}
         >
           {sections.map((s) => (
             <li

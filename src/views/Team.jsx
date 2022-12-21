@@ -4,10 +4,10 @@ import { Title } from "../components"
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 
-import Bruno from "../assets/team/bruno.jpg"
-import Julio from "../assets/team/julio.jpg"
-import Leo from "../assets/team/leo.jpg"
-import Pedro from "../assets/team/pedro.jpg"
+import Bruno from "../assets/team/bruno.png"
+import Julio from "../assets/team/julio.png"
+import Leo from "../assets/team/leo.png"
+import Pedro from "../assets/team/pedro.png"
 import desc from "../assets/team/descriptions.json"
 
 export const Team = forwardRef((props, ref) => {
@@ -49,8 +49,8 @@ export const Team = forwardRef((props, ref) => {
             <div className="flex justify-center items-center w-full dark:bg-team-shape-dark bg-team-shape bg-contain bg-center bg-no-repeat h-[400px]">
               <img
                 src={team[index].photo}
-                width={192}
-                className="ml-36 mb-6 w-48 h-64 rounded-xl"
+                sizes="(max-width: 640px) 100vw, 640px"
+                className="ml-48 mb-6 w-40 h-64 rounded-xl bg-cover"
               />
             </div>
             <div className="flex flex-col justify-center items-center">
@@ -58,7 +58,7 @@ export const Team = forwardRef((props, ref) => {
                 <h3 className="font-extrabold text-4xl text-primary mb-12">
                   Nossa equipe
                 </h3>
-                <p className="text-sm dark:text-white text-bg100 font-semibold mb-6 w-full overflow-auto max-h-56 text-justify pr-6">
+                <p className="text-sm dark:text-white text-bg100 font-medium mb-6 w-full overflow-auto max-h-56 text-justify pr-6">
                   {team[index].description
                     ? team[index].description
                     : `Sem descrição ${index}`}
@@ -73,22 +73,26 @@ export const Team = forwardRef((props, ref) => {
                     </h5>
                   </div>
                   <div className="flex flex-row gap-4">
-                    <button className="rounded-full flex flex-wrap w-10 h-10 justify-center content-center border-2 border-solid dark:border-white border-bg100">
+                    <button
+                      className="rounded-full flex flex-wrap w-10 h-10 justify-center content-center border-2 border-solid dark:border-white border-bg100"
+                      onClick={() =>
+                        setIndex(index - 1 >= 0 ? index - 1 : team.length - 1)
+                      }
+                    >
                       <FiChevronLeft
                         size={20}
                         className="dark:text-white text-bg100"
-                        onClick={() =>
-                          setIndex(index - 1 >= 0 ? index - 1 : team.length - 1)
-                        }
                       />
                     </button>
-                    <button className="rounded-full flex flex-wrap w-10 h-10 justify-center content-center border-2 border-solid dark:border-white border-bg100">
+                    <button
+                      className="rounded-full flex flex-wrap w-10 h-10 justify-center content-center border-2 border-solid dark:border-white border-bg100"
+                      onClick={() =>
+                        setIndex(index + 1 > team.length - 1 ? 0 : index + 1)
+                      }
+                    >
                       <FiChevronRight
                         size={20}
                         className="dark:text-white text-bg100"
-                        onClick={() =>
-                          setIndex(index + 1 > team.length - 1 ? 0 : index + 1)
-                        }
                       />
                     </button>
                   </div>
