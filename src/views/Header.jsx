@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { sections, useScroll, useTheme } from "../App"
 
-import Logo from "../assets/images/logotype.svg"
+import Logo from "../../public/logo.svg"
+import Logotype from "../assets/images/logotype.svg"
 
 import { FiMoon, FiSun } from "react-icons/fi"
 import { VscClose, VscMenu } from "react-icons/vsc"
@@ -26,8 +27,9 @@ export const Header = () => {
       >
         <div className="container flex flex-row items-center justify-between py-7 mx-auto px-6 md:px-0">
           {/* Logo */}
-          <a href="/">
-            <img src={Logo} alt="Ayos Logo" className="w-24" />
+          <a href="/" className="w-24 justify-left">
+            <img src={Logotype} alt="Ayos Logo" className="hidden md:flex" />
+            <img src={Logo} alt="Ayos Logo" className="md:hidden h-8" />
           </a>
 
           {/* Desktop links */}
@@ -54,7 +56,7 @@ export const Header = () => {
           </ul>
 
           {/* Toggle Theme */}
-          <div className="flex justify-end w-24">
+          <div className="flex justify-center lg:justify-end w-24">
             {theme === "dark" ? (
               <FiMoon
                 onClick={handleTheme}
