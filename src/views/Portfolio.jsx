@@ -12,11 +12,9 @@ export const Portfolio = forwardRef((props, ref) => {
           </h1>
         </div>
         <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-4 sm:grid-cols-3 sm:grid-rows-2 sm:h-[60vh] h-screen mt-[10vh] align-middle gap-10 lg:mx-0">
-          <div className="sm:col-span-2 border p-2 rounded-lg">Projeto 01</div>
-          <div className="sm:col-span-1 sm:row-span-2 border p-2 rounded-lg">
-            Projeto 02
-          </div>
-          <div className="border p-2 rounded-lg">Projeto 03</div>
+          <div className="sm:col-span-2 border p-2 rounded-lg bg-project-panther bg-cover"></div>
+          <div className="sm:col-span-1 sm:row-span-2 border p-2 rounded-lg bg-project-lynx bg-cover"></div>
+          <div className="border p-2 rounded-lg bg-project-lion bg-cover"></div>
           <div className="border p-2 rounded-lg">Projeto 04</div>
         </div>
         <div className="flex justify-center mt-20">
