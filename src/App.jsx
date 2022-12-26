@@ -57,7 +57,7 @@ function App() {
           <Header />
           <Hero ref={hero} />
           <About ref={about} />
-          <Portfolio ref={portfolio} />
+          {/* <Portfolio ref={portfolio} /> */}
           <Team ref={team} />
           <Contact ref={contact} />
           <Footer />
@@ -77,7 +77,8 @@ function App() {
 
 export default App
 
-export const sections = ["home", "about", "portfolio", "team", "contact"]
+// export const sections = ["home", "about", "portfolio", "team", "contact"]
+export const sections = ["home", "about", "team", "contact"]
 
 export const useTheme = () => useContext(Theme)
 export const useScroll = () => useContext(Scroll)
