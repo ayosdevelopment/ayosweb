@@ -33,10 +33,14 @@ html {
 
 *::-webkit-scrollbar {
   width: 8px;
+}
 
+*::-webkit-scrollbar-track {
+  @apply bg-white;
+  @apply dark:bg-bg200;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #7258FF;
+  background-color: #7258ff;
   border-radius: 10px;
 }
