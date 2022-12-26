@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { sections, useScroll, useTheme } from "../App"
 
-import Logo from "../../public/logo.svg"
 import Logotype from "../assets/images/logotype.svg"
+import Logo from "/logo.svg"
 
 import { FiMoon, FiSun } from "react-icons/fi"
 import { VscClose, VscMenu } from "react-icons/vsc"
